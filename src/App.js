@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import data from "./components/data";
+import Faq from "./components/Faq";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <section className="Faq">
+        <h1>FAQ</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          An e-book is an electronic version of a traditional print book that
+          can be read by using a personal computer or an e-book reader. When you
+          think about it, it actually means that you can have all your favorite
+          books stored in your pocket and you can read what you want, depending
+          on your mood. So, in addition, we wrote down some questions that are
+          commonly asked in the e-book community
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </section>
+      <main className="container"> 
+      {data.map((item) => (
+        <Faq key={item.id} {...item} />
+      ))}
+      </main>
     </div>
   );
 }

@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root{
+  --color1: #A65362;
+  --color2: #D93D66;
+  --color3: #D97398;
+  --color4: #F2C9E0;
+  --color5: #F2D5E5;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+  body{
+    border-top: 20px solid var(--color2);
+    color: var(--color1);
+    background-color: var(--color5);
   }
-}
+  .App {
+    display: grid;
+    grid-template-columns: 30% 68%;
+    gap: 1rem;
+    border: 2px solid var(--color2);
+    margin: 6rem 1rem;
+    border-radius: 10px;
+    height: 80vh;
+    overflow: hidden;
+  }
+  .Faq {
+    padding: 1rem;
+    text-align: justify;
+    font-size: 1.5rem;
+   
+  }
+  .Faq h1 {
+    text-align: center;
+    color: var(--color2);
+  }
+  .container {
+    margin-left: 1rem;
+  }
+  .title { 
+    font-size: 1.5rem;
+    color: var(--color2);
+    margin-top: 2rem;
+  }
+  .parag {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5rem;
+   
+  }
+  
+  .btn {
+    color: var(--color1);
+    background-color: var(--color5);
+    border: var(--color1);
+  }
+  .icon {
+    font-size: 1.5rem;
+    transform: translate(-8px, 3px);
+    
+  }
+  
+  @media (max-width:800px){
+    body{
+      overflow: hidden;
+    }
+    .App {
+      grid-template-columns:auto;
+      margin: 1rem 1rem 0 1rem;
+      gap: 0rem;
+      overflow: hidden;
+    }
+    
+      .Faq, .title {
+        font-size: 1rem;
+        padding: 0.5rem;
+        margin: 0;
+      }
+      .parag{
+        font-size: 0.8rem;
+      }
+  }
